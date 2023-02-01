@@ -1,0 +1,51 @@
+body {
+    background: #ffd64d;
+}
+
+aside {
+    float:left;
+    background: #131313;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh; /*100 процентов высоты экрана*/
+    color: #fff;
+    border-right: 5px solid #4d4d4d; /*обводка по правой стороне,сплошная*/
+}
+
+aside img{
+    width: 150px;
+    float:left;
+    position:relative;
+    left:50px;
+}
+
+aside .logo{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+aside h3{
+    margin-top: 50px;
+    font-size: 28px;
+    position:relative;
+    left:35%;
+}
+
+aside ul{
+    list-style: none;
+    text-decoration: none;
+   
+}
+
+aside ul li {
+    color: #fff;
+    display: block;
+    margin-top: 20px;
+    transition: all .6s ease;
+}
+
+aside ul li:hover,aside ul a:hover {
+    color: #eb5959; 
+    text-decoration: none;
+    transform: scale(1.05); 
+}
