@@ -22,13 +22,13 @@ aside img{
 aside .logo{
     font-size: 40px;
     font-weight: bold;
+    text-align: center;
 }
 
 aside h3{
     margin-top: 50px;
     font-size: 28px;
-    position:relative;
-    left:35%;
+    text-align: center;
 }
 
 aside ul{
@@ -41,11 +41,26 @@ aside ul li {
     color: #fff;
     display: block;
     margin-top: 20px;
-    transition: all .6s ease;
+    transition: transform .6s ease;
 }
 
 aside ul li:hover,aside ul a:hover {
     color: #eb5959; 
     text-decoration: none;
     transform: scale(1.05); 
+}
+
+main .features{
+    float: left;
+    color: rgb(0, 0, 0);
+    margin-top: 100px;
+    text-align: center;
+    width: 75%;
+}
+
+main .features h1{
+    font-size: 50px;
+}
+main .features p{
+    margin: 20px auto;
 }
