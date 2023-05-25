@@ -7,6 +7,7 @@
         <h1> Form add news </h1>
         <form method = "post">
             {% csrf_token %}
+            {{ form }}
             <input type="text" placeholder="Name" class="form-control"><br>
             <input type="text" placeholder="Announcement" class="form-control"><br>
             <textarea class="form-control" placeholder="Text"></textarea><br>
