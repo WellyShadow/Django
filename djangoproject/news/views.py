@@ -1,13 +1,20 @@
 from django.shortcuts import render, redirect
 from .models import Artiles
 from .forms import ArtilesForm
-from django.views.generic import DetailView
+from django.views.generic import DetailView, UpdateView
 # Create your views here.
 
 
 def news_home(request):
     news = Artiles.objects.order_by('-date')
     return render(request, 'news/news_home.html',{'news':news})
+
+class NewsUpdateView(UpdateView):
+    model=Artiles
+    template_name='news/create.html'
+    
+    #fields=['title','announcement','full_text','date']
+    form_class = ArtilesForm
 
 class NewsDetailView(DetailView):
     model=Artiles
