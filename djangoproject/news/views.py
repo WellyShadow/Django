@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Artiles
 from .forms import ArtilesForm
-from django.views.generic import DetailView, UpdateView
+from django.views.generic import DetailView, UpdateView, DeleteView
 # Create your views here.
 
 
@@ -16,6 +16,11 @@ class NewsUpdateView(UpdateView):
     #fields=['title','announcement','full_text','date']
     form_class = ArtilesForm
 
+class NewsDeleteView(DeleteView):
+    model=Artiles
+    template_name='news/news_delete.html'
+    success_url = '/news/'
+    
 class NewsDetailView(DetailView):
     model=Artiles
     template_name='news/detail_view.html'
